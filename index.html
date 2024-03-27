@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="app" class="calculadora">
+
+        <div class="display">
+            {{ display }}
+        </div>
+
+        <!-- v-on:click = @click -->
+        <div class="linha">
+            <button class="operador" @click="lidarBotao('C')">C</button>
+        </div>
+
+        <div class="linha">
+            <button @click="lidarBotao('7')">7</button>
+            <button @click="lidarBotao('8')">8</button>
+            <button @click="lidarBotao('9')">9</button>
+            <button class="operador" @click="lidarBotao('/')">/</button>
+        </div>
+
+        <div class="linha">
+            <button @click="lidarBotao('4')">4</button>
+            <button @click="lidarBotao('5')">5</button>
+            <button @click="lidarBotao('6')">6</button>
+            <button class="operador" @click="lidarBotao('X')">X</button>
+        </div>
+
+        <div class="linha">
+            <button @click="lidarBotao('1')">1</button>
+            <button @click="lidarBotao('2')">2</button>
+            <button @click="lidarBotao('3')">3</button>
+            <button class="operador" @click="lidarBotao('-')">-</button>
+        </div>
+
+        <div class="linha">
+            <button class="decimal" @click="lidarBotao('.')">•</button>
+            <button @click="lidarBotao('0')">0</button>
+            <button class="igual" @click="lidarBotao('=')">=</button>
+            <button class="operador" @click="lidarBotao('+')">+</button>
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script src="./vue.js"></script>
+<script src="./index.js"></script>
